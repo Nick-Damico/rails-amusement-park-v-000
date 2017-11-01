@@ -12,9 +12,9 @@ class Ride < ActiveRecord::Base
   		"Sorry. You are not tall enough to ride the #{attraction.name}."
   	else
   		user.update(
-  			tickets: user.tickets -= attraction.tickets,
-  		 	nausea: user.nausea += attraction.nausea_rating,
-  		 	happiness: user.happiness += attraction.happiness_rating
+  			tickets: user.tickets - attraction.tickets,
+  		 	nausea: user.nausea + attraction.nausea_rating,
+  		 	happiness: user.happiness + attraction.happiness_rating
   		 	)
   	end
   end

@@ -1,0 +1,15 @@
+<%= form_tag(:controller => 'sessions', :method => "POST", :action => "create") do %>
+	<div class="field">
+		<%= label_tag :'user[name]', "Name" %> <br>
+		<%= text_field_tag :'user[name]' %>
+	</div>
+
+	<div class="field">
+		<%= label_tag :'user[password]', "Password" %> <br>
+		<%= text_field_tag :'user[password]' %>
+	</div>
+
+	<div class="field">
+		<%= submit_tag "Sign In", :class => "btn btn-success" %>
+	</div>
+<% end %>

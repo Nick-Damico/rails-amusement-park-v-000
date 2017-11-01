@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
   	binding.pry
   	@current_user ||= User.find_by(id: session[:id])
   end
+
+  def is_admin?
+    self.admin
+  end
 end
